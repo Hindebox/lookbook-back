@@ -17,9 +17,6 @@ app.use("/products", productsRoute);
 app.use("/users", usersRoute);
 app.use("/swapOrders", ordersRoute);
 
-//TEST
-app.get("/", (req, res) => res.json("This is home"));
-
 //CONNECT TO DB
 //FIX: add the db name before ? in env
 mongoose.connect(process.env.DB_URL);
