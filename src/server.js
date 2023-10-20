@@ -28,4 +28,4 @@ db.once("open", () => {
 });
 
 //Listen to server
-app.listen(2000);
+app.listen(process.env.PORT || 2000);
