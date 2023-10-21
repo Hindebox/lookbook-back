@@ -18,12 +18,7 @@ app.use("/users", usersRoute);
 app.use("/swapOrders", ordersRoute);
 
 //CONNECT TO DB
-mongoose.connect(process.env.MONGODB_URI, {
-  auth: {
-    user: process.env.DATA_API_KEY,
-    password: process.env.DATA_API_URL,
-  },
-});
+mongoose.connect(process.env.DB_URL);
 
 const db = mongoose.connection;
 
