@@ -1,16 +1,15 @@
 
 # LookBook
 
-**LookBook** is your passport to a world of
-sustainable shopping. Say hello to a new
-way of discovering and sharing preloved
-treasures.
-
+**LookBook** is your passport to a world of sustainable shopping.  
+Say hello to a new way of discovering and sharing preloved treasures.
 
 ## API description 	
 
-It supports the CRUD operations for sold products with names and multiple photos, user profiles with names and email, and swap orders that include products and involved users. 
-It utilized MongoDB to store all data and Firebase for storing images and generating image URLs.  
+It supports the CRUD operations for sold products with names and multiple photos,  
+user profiles with names and email, and swap orders that include products and involved users.  
+It utilized MongoDB to store all data and Firebase for storing images and generating image URLs.
+
 ## Tools 🗃️
 This API uses Bcrypt, JWT, MongoDB, Mongoose, Express and Node.js
 
@@ -123,10 +122,15 @@ You can use tools like Postman to test the API endpoints.
 
 ```
 
-#### Get orders with the same buyer
+#### Get orders with the same buyer and sort them
 ```http
-  GET /api/swapOrders/userOrders
-
+  GET /api/swapOrders/userOrders  
+  PARAMS {  
+          buyerUserID: currentUserID,  
+          filter: date or products,  
+          sortOrder: 1 for ascending order  
+              or -1 for descending order,  
+        },
 ```
 
 #### Create a new order 
