@@ -27,5 +27,13 @@ db.once("open", () => {
   console.log("DB connected");
 });
 
+// Serve static files (React app)
+app.use(express.static(path.join(__dirname, "client/build")));
+
+// Handle client-side routing
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+});
+
 //Listen to server
 app.listen(process.env.PORT || 2000);
