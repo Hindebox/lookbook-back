@@ -9,7 +9,6 @@ const UserSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  //FIX: verify email format
   email: {
     type: String,
     required: true,
